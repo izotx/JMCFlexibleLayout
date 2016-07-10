@@ -67,10 +67,20 @@ That's important. At the point when the viewDidLayoutSubviews is called, the iOS
         datasource?.setup()
     }
 ```
+<img src="iPhoneScreenshot.png" alt="Drawing" width="49%"/>
+<img src="iPhoneScreenshot2.png" alt="Drawing" width="49%"/>
+### Step 5 
+Optional Settings
+You can control the look of the collection view by changing values of the following paramaters:
+
+
+* maximumRowHeight - what's the maximum allowed height of the row
+* margin margin around the edges of collection's view content
+* spacing = spacing between the cells (rows and columns) - important currently values under 10 won't work correctly.
 
 
 ## Customization
-Library comes with two data structures that can be subclassed to create custom UI. 
+Library comes with two data structures that can be subclassed to create your custom UI. 
 
 ### Subclassing DataSourceItem provided in the example project.
 The items that will provide the content to collection cells view have to be subclassed from DataSourceItem class. In your implementation you need to overwrite the getSize method, and return the size of the element. For example  MyCustomDataSourceItem class is a subclass of DataSourceItem class that has an instance of UIImage associated with it: 
