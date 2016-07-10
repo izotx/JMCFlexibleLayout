@@ -7,25 +7,23 @@
 
 The collection view is a great UI element but it doesn't handle elements with various content sizes elegantly. But don't you feer that's where JMCFlexibleCollectionLayout comes to rescue. Based on customizable paramaters like spacing between cells, margins, and maximum row height calculates and displays a collection view grid.  
 
-![](header.png)
+![](iPadScreenshot.png)
 
 ## Installation
 
-OS X & Linux:
+iOS:
 
 ```sh
-npm install my-crazy-module --save
-```
-
-Windows:
-
-```sh
-edit autoexec.bat
+copy JMCFlexibleLayout.swift and JMCFlexibleDataSource.swift to your project 
 ```
 
 ## Usage example
 
 A few motivating and useful examples of how your product can be used. Spice this up with code blocks and potentially more screenshots.
+
+![](iPhoneScreenshot.png)
+![](iPhoneScreenshot2.png)
+
 
 ## Development setup
 
