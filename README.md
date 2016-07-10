@@ -21,8 +21,8 @@ copy JMCFlexibleLayout.swift and JMCFlexibleDataSource.swift to your project
 
 A few motivating and useful examples of how your product can be used. Spice this up with code blocks and potentially more screenshots.
 
-![](iPhoneScreenshot.png =250x)
-![](iPhoneScreenshot2.png =250x)
+<img src="iPhoneScreenshot.png" alt="Drawing" style="width: 49%"/>
+<img src="iPhoneScreenshot2.png" alt="Drawing" style="width: 49%"/>
 
 
 ## Development setup
