@@ -129,7 +129,7 @@ Janusz Chudzynski Izotx LLC – [@appzzman](https://twitter.com/appzzman) – ja
 
 Distributed under the BSD license. See ``LICENSE`` for more information.
 
-[https://github.com/yourname/github-link](https://github.com/izotx/JMCFlexibleLayout
+[https://github.com/yourname/github-link](https://github.com/izotx/JMCFlexibleLayout)
 
 <img src="iPhoneScreenshot.png" alt="Drawing" width="49%"/>
 <img src="iPhoneScreenshot2.png" alt="Drawing" width="49%"/>
