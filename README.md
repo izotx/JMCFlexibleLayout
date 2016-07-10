@@ -5,7 +5,7 @@
 <!--//[![Build Status][travis-image]][travis-url]-->
 <!--//[![Downloads Stats][npm-downloads]][npm-url]-->
 
-The collection view is a great UI element but it doesn't handle elements with various content sizes elegantly. But don't you fear that's where JMCFlexibleCollectionLayout comes to rescue. Based on customizable paramaters like spacing between cells, margins, and maximum row height calculates and displays a collection view grid.  
+The collection view is a great UI element but it doesn't handle elements with various content sizes elegantly. JMCFlexibleCollectionLayout based on customizable paramaters like spacing between cells, margins, and maximum row height calculates and displays a collection view grid.  
 
 ![](iPadScreenshot.png)
 
@@ -19,20 +19,51 @@ copy JMCFlexibleLayout.swift and JMCFlexibleDataSource.swift to your project
 
 ## Usage example
 
-A few motivating and useful examples of how your product can be used. Spice this up with code blocks and potentially more screenshots.
+###Step 1
+At first you need to have a collection view. You can create it programmatically or using Storyboards. 
 
-<img src="iPhoneScreenshot.png" alt="Drawing" width="49%"/>
-<img src="iPhoneScreenshot2.png" alt="Drawing" width="49%"/>
+###Step 2
+Create an instance of the library and initialize it.
 
-
-## Development setup
-
-Describe how to install all development dependencies and how to run an automated test-suite of some kind. Potentially do this for multiple platforms.
-
-```sh
-make install
-npm test
+```swift
+class ViewController: UIViewController{
+    /**Instance of the JMC Flexible collection view data source */
+    var datasource: JMCFlexibleCollectionViewDataSource?
 ```
+
+```swift
+class ViewController: UIViewController{
+    /**Instance of the JMC Flexible collection view data source */
+    var datasource: JMCFlexibleCollectionViewDataSource?
+        override func viewDidLoad() {
+        super.viewDidLoad()
+        /**Create an instance of the flexible datasource
+            make sure to pass here the collection view and cell identifier
+         */
+        datasource  = JMCFlexibleCollectionViewDataSource(collectionView: collectionView, cellIdentifier:"cell")
+
+```
+###Step 3 Create datasource data structures
+The items that will provide the content to collection cells view have to be subclassed from DataSourceItem class. In your implementation you need to overwrite the getSize method, and return the size of the element. For example: 
+
+```swift
+class MyDataSourceItem:DataSourceItem{
+    //Image to display in the collection view cell
+    var image:UIImage?
+
+    // Make sure to override this method to pass the size of the element to display in the collection view cell
+    override func getSize()->CGSize{
+        if let image = image {
+            return image.size
+        }
+        return CGSizeZero
+    }
+}
+```
+
+
+
+
 
 ## Release History
 
