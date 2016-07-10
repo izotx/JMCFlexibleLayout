@@ -59,7 +59,7 @@ Data source items need to inherit from JMCDataSourceItem class. Good place to do
     datasource?.dataItems = dataSourceItems
 ```
 
-###Step 4 Called the setup method
+###Step 4 Call the setup method
 That's important. At the point when the viewDidLayoutSubviews is called, the iOS knows exactly what will be the sizes of UI elements. If called prior this point, library can produce unexpected results. 
 ```Swift
   override func viewDidLayoutSubviews() {
@@ -102,7 +102,7 @@ class MyCustomDataSourceItem:DataSourceItem{
 ```
 
 ###  Creating custom collection view cells .
-To do it you have to create a data structure that subclasses from FlexibleCollectionCell. 
+To do it you have to create a data structure that inherits from FlexibleCollectionCell. 
 If you decide to use your own cell, you have to override configureWithItem method and customize the look of your cell. 
 
 ```swift
