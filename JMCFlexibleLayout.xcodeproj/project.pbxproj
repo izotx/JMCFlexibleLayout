@@ -33,7 +33,7 @@
 		B6951F381D31887900307696 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6951F3B1D31887900307696 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6951F3D1D31887900307696 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B6951F431D318A7800307696 /* JMCFlexibleLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JMCFlexibleLayout.swift; sourceTree = "<group>"; };
+		B6951F431D318A7800307696 /* JMCFlexibleLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JMCFlexibleLayout.swift; path = JMCFlexibleLayout/JMCFlexibleLayout.swift; sourceTree = "<group>"; };
 		B6951F581D31D08800307696 /* JMCFlexibleDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JMCFlexibleDatasource.swift; sourceTree = "<group>"; };
 		B6951F5A1D31DB2200307696 /* r0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = r0.jpg; path = Images/r0.jpg; sourceTree = "<group>"; };
 		B6951F5B1D31DB2200307696 /* r1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = r1.jpg; path = Images/r1.jpg; sourceTree = "<group>"; };
@@ -61,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				B6951F581D31D08800307696 /* JMCFlexibleDatasource.swift */,
+				B6951F431D318A7800307696 /* JMCFlexibleLayout.swift */,
 				B6951F451D318D8400307696 /* Images */,
 				B6951F301D31887900307696 /* JMCFlexibleLayout */,
 				B6951F2F1D31887900307696 /* Products */,
@@ -81,7 +82,6 @@
 				B6951F311D31887900307696 /* AppDelegate.swift */,
 				B6951F331D31887900307696 /* ViewController.swift */,
 				B6951F351D31887900307696 /* Main.storyboard */,
-				B6951F431D318A7800307696 /* JMCFlexibleLayout.swift */,
 				B6951F381D31887900307696 /* Assets.xcassets */,
 				B6951F3A1D31887900307696 /* LaunchScreen.storyboard */,
 				B6951F3D1D31887900307696 /* Info.plist */,

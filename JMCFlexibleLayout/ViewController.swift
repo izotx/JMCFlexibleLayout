@@ -17,33 +17,6 @@ import UIKit
 
 
 
-
-class FlexibleCollectionCell : UICollectionViewCell{
-    @IBOutlet weak var imageView: UIImageView!
-    func configureWithItem(item:DataSourceItem, indexPath:NSIndexPath){
-        if let item = item as? MyDataSourceItem{
-            self.imageView.image = item.image
-        }
-    }
-}
-
-
-/**Not that Generic Data source item*/
-class MyDataSourceItem:DataSourceItem{
-    //Image to display in the collection view cell
-    var image:UIImage?
-
-    // Make sure to override this method to pass the size of the element to display in the collection view cell
-    override func getSize()->CGSize{
-        if let image = image {
-            return image.size
-        }
-        return CGSizeZero
-    }
-}
-
-
-
 class ViewController: UIViewController{
     /**Instance of the JMC Flexible collection view data source */
     var datasource: JMCFlexibleCollectionViewDataSource?
@@ -59,8 +32,6 @@ class ViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-       
         /**Create an instance of the flexible datasource
             make sure to pass here the collection view and cell identifier
          */
@@ -68,10 +39,10 @@ class ViewController: UIViewController{
         
         
         //prepare items to display in the collection view
-        var dataSourceItems = [MyDataSourceItem]()
+        var dataSourceItems = [JMCDataSourceItem]()
  
         for i in 0...8{
-            let item = MyDataSourceItem()
+            let item = JMCDataSourceItem()
             item.image = UIImage(named: "r\(i).jpg")
             dataSourceItems.append(item)
         }
