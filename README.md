@@ -5,7 +5,7 @@
 <!--//[![Build Status][travis-image]][travis-url]-->
 <!--//[![Downloads Stats][npm-downloads]][npm-url]-->
 
-The collection view is a great UI element but it doesn't handle elements with various content sizes elegantly. JMCFlexibleCollectionLayout based on customizable paramaters like spacing between cells, margins, and maximum row height calculates and displays a collection view grid. It serves role of both UICollectionViewDataSource and UICollectionViewDelegate. 
+The collection view is a great UI element but it doesn't handle elements with various content sizes elegantly. JMCFlexibleCollectionLayout based on customizable paramaters like spacing between cells, margins, and maximum row height calculates and displays a collection view grid with elements that maintain their original aspect ratio. It serves role of both UICollectionViewDataSource and UICollectionViewDelegate. 
 
 ![](iPadScreenshot.png)
 
