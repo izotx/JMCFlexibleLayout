@@ -27,15 +27,16 @@ class ViewController: UIViewController{
     @IBOutlet weak var collectionView: UICollectionView!
 ```
 
-###Step 2 
-Create an instance of the library and initialize it.
-
 In the sample project I created and registered cell programmatically. You can do it using storyboards or programmtically as well as long as the cell extends the FlexibleCollectionCell class. 
 
 ```swift
 
    /**Register collection view cell */
    collectionView.registerClass(FlexibleCollectionCell.self, forCellWithReuseIdentifier: "cell")
+```
+
+###Step 2 
+Create an instance of the library and initialize it.
 ```
 
 To initialize library you have to pass an instance of UICollectionView and the unique identifier of collection view cell. 
