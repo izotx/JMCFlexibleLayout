@@ -9,6 +9,8 @@ The collection view is a great UI element but it doesn't handle elements with va
 
 ![](iPadScreenshot.png)
 
+![](iPadRetina.gif)
+
 ## Installation
 
 iOS:
@@ -16,6 +18,7 @@ iOS:
 ```sh
 copy JMCFlexibleLayout.swift and JMCFlexibleDataSource.swift to your project 
 ```
+
 
 ## Usage example
 
