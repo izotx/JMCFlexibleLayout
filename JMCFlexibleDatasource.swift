@@ -101,6 +101,7 @@ class JMCFlexibleCollectionViewDataSource: NSObject, UICollectionViewDataSource,
     /**Margins around the collection view*/
     var margin:CGFloat = 25{
         didSet{
+           
             setup()
         }
     }
@@ -108,6 +109,14 @@ class JMCFlexibleCollectionViewDataSource: NSObject, UICollectionViewDataSource,
     /**Spacing between the cells*/
     var spacing:CGFloat = 14{
         didSet{
+            if let c = collectionView
+            {
+                print(c.frame)
+                if spacing * 2 >= c.frame.width{
+                    spacing = 14
+                }
+            }
+            
             setup()
         }
     }
@@ -121,6 +130,7 @@ class JMCFlexibleCollectionViewDataSource: NSObject, UICollectionViewDataSource,
     /**Data source elements to display*/
     var dataItems = [JMCDataSourceItem](){
         didSet{
+            //dataItems = dataItems.filter({$0.image != nil})
             setup()
         }
     }

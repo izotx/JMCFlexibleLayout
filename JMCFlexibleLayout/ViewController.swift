@@ -32,11 +32,11 @@ class ViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        /**Create an instance of the flexible datasource
-            make sure to pass here the collection view and cell identifier
-         */
-
+        
+        /**Register collection view cell */
         collectionView.registerClass(FlexibleCollectionCell.self, forCellWithReuseIdentifier: "cell")
+ 
+        /** Create an instance of the flexible datasource make sure to pass here the collection view and cell identifier */
         datasource  = JMCFlexibleCollectionViewDataSource(collectionView: collectionView, cellIdentifier:"cell")
         
         //prepare items to display in the collection view
