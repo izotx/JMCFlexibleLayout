@@ -19,7 +19,7 @@ iOS:
 copy JMCFlexibleLayout.swift and JMCFlexibleDataSource.swift to your project 
 ```
 
-![](iPadGif.gif)
+![](iPadRetina.gif)
 
 
 ## Usage example
