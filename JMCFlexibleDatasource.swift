@@ -68,10 +68,10 @@ class FlexibleCollectionCell : UICollectionViewCell{
         imageView.topAnchor.constraintEqualToAnchor(contentView.topAnchor).active = true
         imageView.bottomAnchor.constraintEqualToAnchor(contentView.bottomAnchor).active = true
         
-        imageView.layer.borderColor = UIColor.greenColor().CGColor
-        imageView.layer.borderWidth = 1.0
-        contentView.layer.borderColor = UIColor.redColor().CGColor
-        contentView.layer.borderWidth = 1.0
+//        imageView.layer.borderColor = UIColor.greenColor().CGColor
+//        imageView.layer.borderWidth = 1.0
+//        contentView.layer.borderColor = UIColor.redColor().CGColor
+//        contentView.layer.borderWidth = 1.0
     }
     
         
