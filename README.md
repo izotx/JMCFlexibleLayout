@@ -20,11 +20,21 @@ copy JMCFlexibleLayout.swift and JMCFlexibleDataSource.swift to your project
 ## Usage example
 
 ###Step 1
-At first you need to setup a collection view. You can create it programmatically or using Storyboards. 
+At first you need to setup a collection view. You can create it programmatically or using Storyboards. If you look at the example project, collection view is added using Storyboard. You can either use FlexibleCollectionCell as a cell or subclass it. Below is example of how to register the cell programmatically.
+
+```swift
+     override func viewDidLoad() {
+        super.viewDidLoad()
+      collectionView.registerClass(FlexibleCollectionCell.self, forCellWithReuseIdentifier: "cell")
+      //...
+      }
+```
+
+
 
 ###Step 2
 Create an instance of the library and initialize it.
-To initialize library you have to pass an instance of UICollectionView and the unique identifier of collection view cell. 
+To initialize library you have to pass an instance of UICollectionView and the unique identifier of collection view cell. For purposes of example I created and registered cell programmatically. 
 
 ```swift
 class ViewController: UIViewController{
