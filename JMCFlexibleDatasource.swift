@@ -40,14 +40,50 @@ class JMCDataSourceItem:DataSourceItem{
 }
 
 
+/***Sample FLexible Collection View Cell*/
 class FlexibleCollectionCell : UICollectionViewCell{
-    @IBOutlet weak var imageView: UIImageView!
+    var imageView = UIImageView()
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        contentView.addSubview(imageView)
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        self.translatesAutoresizingMaskIntoConstraints = false
+       
+        imageView.trailingAnchor.constraintEqualToAnchor(contentView.trailingAnchor).active = true
+        imageView.leadingAnchor.constraintEqualToAnchor(contentView.leadingAnchor).active = true
+        imageView.topAnchor.constraintEqualToAnchor(contentView.topAnchor).active = true
+        imageView.bottomAnchor.constraintEqualToAnchor(contentView.bottomAnchor).active = true
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        contentView.addSubview(imageView)
+        imageView.contentMode = .ScaleAspectFit
+       
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        self.translatesAutoresizingMaskIntoConstraints = false
+        
+        imageView.trailingAnchor.constraintEqualToAnchor(contentView.trailingAnchor).active = true
+        imageView.leadingAnchor.constraintEqualToAnchor(contentView.leadingAnchor).active = true
+        imageView.topAnchor.constraintEqualToAnchor(contentView.topAnchor).active = true
+        imageView.bottomAnchor.constraintEqualToAnchor(contentView.bottomAnchor).active = true
+        
+        imageView.layer.borderColor = UIColor.greenColor().CGColor
+        imageView.layer.borderWidth = 1.0
+        contentView.layer.borderColor = UIColor.redColor().CGColor
+        contentView.layer.borderWidth = 1.0
+    }
+    
+        
     func configureWithItem(item:DataSourceItem, indexPath:NSIndexPath){
+       
         if let item = item as? JMCDataSourceItem{
             self.imageView.image = item.image
         }
     }
+
 }
+    
 
 /*Datasource for the collection view*/
 class JMCFlexibleCollectionViewDataSource: NSObject, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{

@@ -35,8 +35,9 @@ class ViewController: UIViewController{
         /**Create an instance of the flexible datasource
             make sure to pass here the collection view and cell identifier
          */
+
+        collectionView.registerClass(FlexibleCollectionCell.self, forCellWithReuseIdentifier: "cell")
         datasource  = JMCFlexibleCollectionViewDataSource(collectionView: collectionView, cellIdentifier:"cell")
-        
         
         //prepare items to display in the collection view
         var dataSourceItems = [JMCDataSourceItem]()
