@@ -19,35 +19,44 @@ copy JMCFlexibleLayout.swift and JMCFlexibleDataSource.swift to your project
 
 ## Usage example
 
-###Step 1
-At first you need to setup a collection view. You can create it programmatically or using Storyboards. If you look at the example project, collection view is added using Storyboard. You can either use FlexibleCollectionCell as a cell or subclass it. Below is example of how to register the cell programmatically.
-
-```swift
-     override func viewDidLoad() {
-        super.viewDidLoad()
-      collectionView.registerClass(FlexibleCollectionCell.self, forCellWithReuseIdentifier: "cell")
-      //...
-      }
-```
-
-
-
-###Step 2
-Create an instance of the library and initialize it.
-To initialize library you have to pass an instance of UICollectionView and the unique identifier of collection view cell. For purposes of example I created and registered cell programmatically. 
+###Step 1 Configure Collection View 
+At first you need to setup a collection view. You can create it programmatically or using Storyboards. If you look at the example project, collection view is added using Storyboard. 
 
 ```swift
 class ViewController: UIViewController{
+    @IBOutlet weak var collectionView: UICollectionView!
+```
+
+###Step 2 
+Create an instance of the library and initialize it.
+
+In the sample project I created and registered cell programmatically. You can do it using storyboards or programmtically as well as long as the cell extends the FlexibleCollectionCell class. 
+
+```swift
+
+   /**Register collection view cell */
+   collectionView.registerClass(FlexibleCollectionCell.self, forCellWithReuseIdentifier: "cell")
+```
+
+To initialize library you have to pass an instance of UICollectionView and the unique identifier of collection view cell. 
+
+```swift
+
+class ViewController: UIViewController{
     /**Instance of the JMC Flexible collection view data source */
     var datasource: JMCFlexibleCollectionViewDataSource?
-        override func viewDidLoad() {
-        super.viewDidLoad()
-        /**Create an instance of the flexible datasource
-            make sure to pass here the collection view and cell identifier
-         */
-        datasource  = JMCFlexibleCollectionViewDataSource(collectionView: collectionView, 
-        cellIdentifier:"cell")
+     
+    @IBOutlet weak var collectionView: UICollectionView!
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        /**Register collection view cell */
+        collectionView.registerClass(FlexibleCollectionCell.self, forCellWithReuseIdentifier: "cell")
+ 
+        /** Create an instance of the flexible datasource make sure to pass here the collection view and cell identifier */
+        datasource  = JMCFlexibleCollectionViewDataSource(collectionView: collectionView, cellIdentifier:"cell")
+      
 ```
 
 
@@ -81,7 +90,6 @@ That's important. At the point when the viewDidLayoutSubviews is called, the iOS
 ### Step 5 
 Optional Settings
 You can control the look of the collection view by changing values of the following paramaters:
-
 
 * maximumRowHeight - what's the maximum allowed height of the row
 * margin margin around the edges of collection's view content
