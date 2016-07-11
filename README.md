@@ -40,13 +40,11 @@ In the sample project I created and registered cell programmatically. You can do
 
 ###Step 2 
 Create an instance of the library and initialize it.
-```
 
 To initialize library you have to pass an instance of UICollectionView and the unique identifier of collection view cell. 
 
 ```swift
-
-class ViewController: UIViewController{
+    class ViewController: UIViewController{
     /**Instance of the JMC Flexible collection view data source */
     var datasource: JMCFlexibleCollectionViewDataSource?
      
@@ -60,7 +58,6 @@ class ViewController: UIViewController{
  
         /** Create an instance of the flexible datasource make sure to pass here the collection view and cell identifier */
         datasource  = JMCFlexibleCollectionViewDataSource(collectionView: collectionView, cellIdentifier:"cell")
-      
 ```
 
 
